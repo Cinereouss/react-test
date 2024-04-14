@@ -1,0 +1,90 @@
+$huntyellow: #FDD726;
+$reynoldsred: #990000;
+$genomicgreen: #7D8C1F;
+
+.todo-list {
+  text-align: center;
+  margin: auto;
+  width: 40rem;
+  
+  &__button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 1, 4rem;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.5 ease;
+
+    &--add-task {  
+      background-color: $genomicgreen;
+      
+      &:hover {
+        background-color: darken($genomicgreen, 10%);
+      }
+    }
+
+    &--edit {
+      background-color: $huntyellow;
+
+      &:hover {
+        background-color: darken($huntyellow, 10%);
+      }
+    }
+
+    &--remove {
+      background-color: $reynoldsred;
+
+      &:hover {
+        background-color: darken($reynoldsred, 10%);
+      }
+    }
+  }
+
+  &__new-task {
+    &>input {
+      border: none;
+      border-radius: 5px;
+      background-color: #d1d1d1;
+      margin-right: 10px;
+      height: 1.5rem;
+      padding: 0 10px
+    }
+
+    padding-bottom: 1.5rem;
+  }
+
+  &__break-line {
+    border: none;
+    width: 40rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.3);
+  }
+
+  &__list-task {
+    width: 100%;
+    &__task {
+      display: flex;  
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &__status {
+        width: 1rem;
+        text-align: center;
+      }
+
+      &__content {
+        width: 26rem;
+        word-wrap: break-word;
+        padding: 0 1rem;
+      }
+
+      &__action {
+        width: 9rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 1rem;
+      }
+    } 
+  }
+}

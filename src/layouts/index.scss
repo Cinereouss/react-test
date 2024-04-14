@@ -1,0 +1,38 @@
+.app {
+  display: grid;
+  grid-template-columns: 15vw 45vw 40vw;
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-areas: 
+  'navbar header header'
+  'navbar content content'
+  'footer footer footer';
+
+
+  &__header {
+    grid-area: header;
+    background: red;
+    min-height: 50px;
+  }
+
+  &__navbar {
+    grid-area: navbar;
+    background: green;
+    min-height: 50px;
+  }
+
+  &__content {
+    grid-area: content;
+    max-height: 80vh;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__footer {
+    grid-area: footer;
+    background: greenyellow;
+    min-height: 50px;
+  }
+}
