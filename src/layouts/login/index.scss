@@ -1,0 +1,99 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/images/g8_login_dark.svg") center top / auto no-repeat;
+  position: relative;
+  color: rgb(204, 204, 220);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+  &__from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 478px;
+    height: calc(537px + 32px);
+    padding: 16px 0;
+    background: 0% 0% / cover rgba(24, 27, 31, 0.7);;
+    border-radius: 8px;
+
+    &__header {
+      text-align: center;
+      padding: 24px;
+
+      & > img {
+        width: 100px;
+        height: 100px;
+      }
+
+      & > h1 {
+        line-height: 1.14286;
+        font-weight: -0.00893em;
+        letter-spacing: -0.00893em;
+      }
+    }
+
+    &__body {
+      padding: 40px 40px;
+
+      &__input {
+        display: block;
+        width: 100%;
+        margin: 16px 0px;
+
+        & > input {
+          width: 100%;
+          padding: 0.5rem 1rem;
+          margin: 0.5rem 0;
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          background: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
+        }
+      }
+
+      &__submit {
+        margin: 16px 0px;
+
+        & > button {
+          width: 100%;
+          padding: 0.5rem 1rem;
+          margin: 0.5rem 0;
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          background: rgba(60, 113, 217, 1);
+          color: #ffffff;
+        }
+
+        & > a {
+          display: block;
+          text-align: right;
+          margin-top: 1rem;
+          color: rgba(80, 112, 180, 1);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    color: #ffffff;
+    display: flex;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem 0;
+
+    &__item {
+      font-size: 14px;
+
+      &:not(:first-child):before {
+        content: "|";
+        font-size: 14px;
+        display: inline-block;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
