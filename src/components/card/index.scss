@@ -1,0 +1,66 @@
+.card {
+  width: 40%;
+  height: 330px;
+  max-width: 400px;
+  max-height: 800px;
+  background: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 1s ease;
+
+  & > img {
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  &__content {
+    & > h2 {
+      padding: 15px 0;
+      margin: 0 auto;
+    }
+
+    & > p {
+      visibility: hidden;
+      line-height: 1.5rem;
+    }
+
+    & > button {
+      visibility: hidden;
+      padding: 10px 20px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 5px;
+      background: #222831;
+      color: #eeeeee;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    position: relative;
+    height: auto;
+
+    & > img {
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    & > .card__content {
+      margin-top: 90px;
+
+      & > p {
+        visibility: visible;
+      }
+
+      & > button {
+        visibility: visible;
+      }
+    }
+  }
+}
